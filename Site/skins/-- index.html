@@ -1,0 +1,57 @@
+---
+permalink: /skins/index.html
+layout: main
+title: Skins
+---
+
+{% include title.html
+	size="normal"
+	color="pink" 
+
+	title="Skins."
+	description="Take a look at my osu! skin portfolio."
+	%}
+<div class="skinGrid">
+	{% include skin.html
+		skinID="1573514"
+		name="miku"
+		grid="gridWide"
+		title="39"
+		description="The Miku skin from the Miku lover himself."%}
+
+	{% include skin.html
+		skinID="1521212"
+		name="whatsApp"
+		grid="gridLong"
+		title="WhatsApp"
+		description="peppy bought WhatsApp."%}
+	 
+	{% include skin.html
+		skinID="1386269"
+		name="alice"
+		grid="gridNormal"
+		title="Alice Zuberg"
+		description="Now available in... 39:18?"%}
+
+	{% include skin.html
+		skinID="1334702"
+		name="sunset"
+		grid="gridHalf"
+		title="Sunset Material"
+		description="Colorful and Dark."%}
+
+	{% include skin.html
+		skinID="1281532"
+		name="whoTao"
+		grid="gridHalf"
+		title="Who Tao"
+		description="skinship osu! Skinning Contest Entry"%}
+
+	{% include skinNotAvailable.html
+		name="soon"
+		grid="gridWide"
+		title="Soon™"
+		description="What will be next?"
+		message="We'll probably never know..."%}
+	
+</div>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>{{ site.title }} | {{ page.title }}</title>
+	
+	<script src="https://kit.fontawesome.com/9d6383265f.js" crossorigin="anonymous"></script>
+	
+	
+	
+	
+	
+	
+	
+	<!-- Embed Settings -->
+	
+	<meta name="theme-color" content="#393939">
+	<meta name="description" content="osu! skinner, graphic designer, and Miku lover.">
+	<meta property="og:title" content="/set the/">
+	<meta property="og:description" content="osu! skinner and player, graphic designer, and Miku lover.">
+	<meta property="og:url" content="https://xet-the.com">
+	
+	<link rel="icon" href="/resources/icon.svg">
+	
+	<!-- CSS Thingies -->
+	
+	<link rel="stylesheet" type="text/css" href="/resources/dark.css" id="mainCSS">
+	
+	<!-- JS Thingies -->
+	
+	<script src="/resources/js/theme.js"></script>
+
+	<script src="/resources/js/cookies.js" defer></script>
+	
+	{{ page.scripts }}
+	
+</head>
+<body>
+	
+	{% include navbar.html %}
+	
+	<main>
+		
+		{{ content }}
+		
+	</main>
+	
+	<div class="navItem" id="themeButton" onclick="changeTheme()">
+		<i class="fa-solid fa-sun" title="Change Theme"></i>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,830 @@
+/*
+Imports and other internet-related stuff. (but mainly just imports) 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Comfortaa:wght@300..700&family=Stick&display=swap');
+@import url("https://use.typekit.net/uty3zzz.css");
+
+/*
+Body Config 
+*/
+
+body {
+    overflow-x: hidden;
+    overflow-y: overlay;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    
+    min-height: 100vh;
+
+    margin: 0%;
+    background-color: black;
+}
+
+img {
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    width: 4px;
+    margin: 100px 0px 180px 0px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff40;
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+}
+
+::selection {
+    color: white;
+    background-color: #ffffff40;
+    mix-blend-mode: overlay;
+}
+
+button {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 24px;
+}
+
+/*
+Main Page Settings
+*/
+
+main {
+    margin: auto 0;
+
+    color: #808080;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main a {
+    transition: ease-in-out 200ms;
+}
+
+main a:link {
+    text-decoration: none;
+    color: #808080;
+}
+
+main a:visited {
+    text-decoration: none;
+    color: #808080;
+}
+
+main a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+main .logo {
+    max-width: 600px;
+    width: 50%;
+    margin-top: 160px;
+}
+
+.logo {
+    user-select: none;
+    pointer-events: none;
+}
+
+.options {
+    margin-top: 40px;
+    cursor: default;
+}
+
+/*
+Header Settings
+*/
+
+header {
+    z-index: 727;
+    margin-bottom: 40px;
+    height: 80px;
+
+    position: sticky;
+    top: 0;
+
+    background-color: #202020cc;
+
+    border-radius: 0 0 10px 10px;
+    border-bottom: 2px solid #ffffff39;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    transition: ease-in-out 300ms; 
+    
+    user-select: none;
+}
+
+header .logo {
+    margin: 0 0 0 40px;
+    height: 20px;
+}
+
+header a {
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+header a:link {
+    text-decoration: none;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/*
+Footer Settings
+*/
+
+footer {
+    position: relative;
+    height: 160px;
+
+    margin-top: 40px;
+
+    background-color: #1a1a1a;
+
+    border-radius: 10px 10px 0 0;
+    border-top: 2px solid #393939;
+}
+
+footer .container{
+    margin: 0 40px 0 40px;
+    height: 160px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .logo {
+    height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    color: #393939;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/*
+Social Icons Settings
+*/
+
+.socials {
+    color: #393939;
+    display: flex;
+    gap: 20px;
+    animation: welcome 1s cubic-bezier(0, 1, 1, 1) 1;
+    margin: 40px 0;
+}
+
+.socials a {
+    transition: cubic-bezier(0, 1, 1, 1) 300ms;
+
+    font-size: 32px;
+}
+
+.socials a:link {
+    color: #393939;
+}
+
+.socials a:visited {
+    color: #393939;
+}
+
+.socials a:hover {
+    color: #808080;
+}
+
+@keyframes welcome {
+    from {
+        opacity: 0;
+        gap: 80px;
+    }
+}
+
+/*
+404 Page Settings
+*/
+
+.notFound {
+    height: auto;
+    margin: auto;
+
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+
+    user-select: none;
+    pointer-events: none;
+
+    color: white;
+
+    transform: translateX(-50px);
+
+    animation: notFoundMain 2s cubic-bezier(0, 1, 0, 1) 990ms forwards;
+}
+
+.notFound h1 {
+    transform: translateX(0px);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 160px;
+
+    animation: notFound 1s cubic-bezier(1, 0, 1, 1);
+}
+
+.notFound h2 {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 48px;
+
+    opacity: 0;
+    animation: notFoundFade 500ms ease-in-out 1.1s 1 forwards;
+}
+
+@keyframes notFound {
+    from {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes notFoundMain {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes notFoundFade {
+    to {
+        opacity: 1;
+    }
+}
+
+/*
+Title Settings
+*/
+
+.title {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-size: cover;
+    background-color: black;
+    border-radius: 12px;
+    color: white;
+    margin: 0 10px 40px 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title h1 {
+    font-weight: 800;
+    margin: 20px 40px 0 40px;
+}
+
+.title h2 {
+    font-weight: 400;
+    margin-left: 40px;
+}
+
+.titleBig {
+    height: 320px;
+}
+
+.titleNormal {
+    height: 240px;
+}
+
+.titleMini {
+    height: 100px;
+}
+
+.titleMini h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 0 40px;
+}
+
+.titleMini h2 {
+    display: none;
+}
+
+#blue {
+    background-image: url("/resources/title/blue.png");
+}
+
+#pink {
+    background-image: url("/resources/title/pink.png");
+}
+
+#neon {
+    background-image: url("/resources/title/neon.png");
+}
+
+#rasp {
+    background-image: url("/resources/title/rasp.png");
+}
+
+#tech {
+    background-image: url("/resources/title/tech.png");
+}
+
+#pink {
+    background-image: url("/resources/title/pink.png");
+}
+
+#gold {
+    background-image: url("/resources/title/gold.png");
+}
+
+/*
+SKins Page Settings
+*/
+
+/*
+Skin Wrapper Settings
+*/
+
+.skinGrid {
+    margin: 0 10px 0 10px;
+    display: grid;
+    gap: 40px;
+
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+}
+
+.skinWrap {
+    margin: auto;
+    width: 100%;
+
+    background-position: 50%;
+    background-size: cover;
+}
+
+.skinWrap:hover .skin{
+    width: calc(100% - 100px);
+    border-radius: 16px;
+    background-size: calc( cover + 10px );
+}
+
+#gridWide {
+    grid-column: span 8 / auto;
+}
+
+#gridLong {
+    grid-column: span 5 / auto;
+}
+
+#gridHalf {
+    grid-column: span 4 / auto;
+}
+
+#gridNormal {
+    grid-column: span 3 / auto;
+}
+
+/*
+Generic Skin Settings
+*/
+
+.skin {
+    transition: cubic-bezier(0, 1, 1, 1) 300ms;
+
+    border-radius: 8px;
+
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: 50%;
+
+    margin: auto;
+    padding: 0 40px 0 40px;
+
+    width: calc( 100% - 80px );
+    height: 360px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.skin p {
+    color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.skin a {
+    text-decoration: none;
+}
+
+.skinOptions a {
+    transition: ease-in-out 300ms;
+    color: white;
+    opacity: 50%;
+    font-size: 32px;
+}
+
+.skinOptions a:link {
+    color: white;
+    opacity: 50%;
+}
+
+.skinOptions a:hover {
+    opacity: 1;
+}
+
+#soon {
+    cursor: default;
+}
+
+.skin h1 {
+    margin: 80px 0 10px 0;
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.skin h2 {
+    margin: 0;
+    color: #ffffff80;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.skinWrap:hover .skinOptions{
+    opacity: 1;
+    gap: 10px;
+}
+
+.skinOptions {
+    opacity: 0;
+    transition: cubic-bezier(0, 1, 1, 1) 300ms;
+    margin-top: 40px;
+    display: flex;
+    gap: 0px;
+    align-items: baseline;
+}
+
+/*
+39 Settings
+*/
+
+#miku {
+    background-image: url(/resources/skins/miku/main.png);
+}
+
+#miku h1 {
+    font-family: 'Tachyon', sans-serif;
+}
+
+#miku h2 {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/*
+WhatsApp Settings
+*/
+
+#whatsApp {
+    background-image: url(/resources/skins/backgrounds/WhatsApp.png);
+}
+
+#whatsApp h1 {
+    color: #e0e0e0;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 900;
+}
+
+#whatsApp h2 {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+/*
+Alice Zuberg Settings
+*/
+
+#alice {
+    background-image: url(/resources/skins/backgrounds/Alice.png);
+}
+
+#alice h1 {
+    filter: drop-shadow(0 0 12px #face7880) drop-shadow( 0 0 2px #face78);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 600;
+}
+
+#alice h2 {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/*
+Sunset Material Settings
+*/
+
+#sunset {
+    background-image: url(/resources/skins/backgrounds/Sunset.png);
+}
+
+#sunset h1 {
+    filter: drop-shadow( 0 0 4px #ffffff);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+}
+
+#sunset h2 {
+    color: #f0f0f0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/*
+Who Tao Settings
+*/
+
+#whoTao {
+    background-image: url(/resources/skins/backgrounds/WhoTao.png);
+}
+
+#whoTao h1 {
+    font-family: 'Stick', serif;
+}
+
+#whoTao h2 {
+    font-family: 'Akaya Telivigala', serif;
+}
+
+/*
+Gallery Page Settings
+*/
+
+    /*
+    Gallery Div Setings
+    */
+
+.galleryGrid {
+    margin: 0 10px 40px 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, minmax(320px, 1fr));
+    grid-template-rows: repeat(6, 400px);
+}
+
+.galleryImage {
+    transition: cubic-bezier(0,1 ,1 ,1) 300ms;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    background-color: #1a1a1a;
+}
+
+.galleryImage:hover {
+    transform: scale(0.98)
+}
+
+/*
+Gallery Image Types
+*/
+
+#tall {
+    grid-column: span 2 / auto;
+    grid-row: span 3 / auto;
+}
+
+#tallSmall {
+    grid-column: span 1 / auto;
+    grid-row: span 2 / auto;
+}
+
+#square {
+    grid-column: span 2 / auto;
+    grid-row: span 2 / auto;
+}
+
+#long {
+    grid-column: span 2 / auto;
+    grid-row: span 1 / auto;
+}
+
+/*
+Skin Page Title
+*/
+
+.skinTitle {
+    transition: cubic-bezier(0, 1, 1, 1) 300ms;
+
+    border-radius: 8px;
+
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: 50%;
+
+    margin: 0 10px;
+    margin-bottom: 40px;
+    padding: 0 40px 0 40px;
+
+    height: 240px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: 'Kumbh Sans', sans-serif;
+    color: white;
+}
+
+.skinTitle h1 {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.skinTitle h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.skinDescription {
+    font-family: 'Kumbh Sans', sans-serif;
+    color: white;
+    margin: auto 40px;
+    margin-bottom: 40px;
+}
+
+.skinDescription h1 {
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.skinDescription p {
+    margin: 0;
+}
+
+.skinGrid-2 {
+    display: grid;
+    gap: 10px;
+    margin: auto 10px;
+    margin-bottom: 40px;
+    grid-template-rows: repeat(4, 172px);
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+}
+
+.skinDownload {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 200px;
+
+    color: white;
+    margin: auto 10px;
+}
+
+.skinDownload a {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: ease-in-out 200ms;
+}
+
+.skinDownload a:link {
+    color: #808080;
+    text-decoration: none;
+}
+
+.skinDownload a:visited {
+    color: #808080;
+    text-decoration: none;
+}
+
+.skinDownload a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.downloadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    width: 100%;
+    height: 100%;
+}
+
+#small {
+    width: 100%;
+    grid-column: span 1 / auto;
+    grid-row: span 1 / auto;
+}
+
+#big {
+    width: 100%;
+    grid-column: span 2 / auto;
+    grid-row: span 2 / auto;
+}
+
+#mikuTitle {
+    background-image: url(/resources/title/blue.png);
+}
+
+#mikuTitle h1 {
+    font-family: 'Tachyon';
+}
+
+/*
+Media Queries
+*/
+
+@media (max-width: 640px) {
+    header .logo {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 1365px) {
+    .skinGrid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skin h1 {
+        font-size: 48px;
+    }
+
+    .skin h2 {
+        font-size: 14px;
+    }
+
+    #sunset h1 {
+        font-size: 40px;
+    }
+
+    .skinGrid-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galleryGrid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galleryImage {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1366px) {
+    #big {
+        height: 100%;
+    }
+    
+    #small {
+        height: 100%;
+    }
+}

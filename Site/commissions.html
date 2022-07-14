@@ -1,0 +1,77 @@
+---
+layout: main
+title: Commissions
+
+scripts: "
+
+<script src=\"resources/js/commissionPrices.js\" defer ></script>
+<script src=\"/resources/js/copyText.js\" defer ></script>
+<script src=\"/resources/js/commissionCheck.js\" defer ></script>
+
+"
+---
+
+{% include title.html
+	size="normal"
+	color="gold" 
+	title="Commissions."
+	description="Pay me to make you something."
+	bgPercent="0%"
+%}
+
+{% include title.html
+	size="mini"
+	color="gold"
+	title="Status"
+%}
+
+<div class="status" id="neutral">
+	<h1 id="checkText">Checking...</h1>
+</div>
+
+{% include title.html
+	size="mini"
+	color="gold"
+	title="Items & Pricing."
+%}
+
+<div class="genericDescription prices">
+
+</div>
+
+{% include title.html
+	size="mini"
+	color="gold"
+	title="Contact"
+%}
+
+<div class="genericDescription contact">
+	<ul>
+		<li>
+			<i class="fa-brands fa-discord"></i><a onclick="copyText()" onmouseleave="setTimeout(resetText, 500)">Xet#3939</a>
+			<p class="tooltip">Copy to Clipboard.</p>
+		</li>
+		<li><i class="fa-brands fa-twitter"></i><a href="https://twitter.com/Xet_The">@Xet_The</a></li>
+		<li><i class="fa-brands fa-reddit"></i><a href="https://reddit.com/u/am3n0">u/am3n0</a></li>
+		<li><i class="fa-solid fa-envelope"></i><a href="mailto:xet.the.727@gmail.com?Subject=Commission Request">xet.the.727@gmail.com</a></li>
+	</ul>
+</div>
+
+{% include title.html
+	size="mini"
+	color="gold"
+	title="Terms and Conditions"
+%}
+
+<div class="genericDescription terms">
+	<ol>
+		<li>I reserve the right to reject any commissions at my own discretion.</li>
+		<li>I own the rights to my work, which allows me to use it for any purposes.</li>
+		<li>I may show you progress of the commission via DMs or Streaming it on Twitch.</li>
+		<li>The time I may take to finish a commission skin depends on a variety of factors, such as: Commissioned Character, Availability of character artwork, Theme, Complexity, etc.</li>
+		<li>You can pay me via Discord Nitro gifts, osu! supporter tags, or PayPal.</li>
+		<li>The payment is done 50% upfront and 50% after finishing.</li>
+		<li>If you ask for any additional items (eg. osu!taiko mode, tournament background, or profile panels) after you paid the first half you need to pay in full for that item.</li>
+		<li>No refunds, Unless it's requested shortly <b>(No more than 30 Minutes)</b> after the payment is made.</li>
+	</ol>
+</div>

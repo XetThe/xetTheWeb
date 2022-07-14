@@ -1,0 +1,46 @@
+---
+layout: main
+title: page.skinTitle
+---
+
+{% include skinTitle.html
+	size="big"
+	skin=page.style
+	title=page.skinTitle
+	description=page.skinTitleDescription
+%}
+
+<div class="genericDescription">
+	<h1>Description</h1>
+
+	{{ page.skinDescription }}
+
+</div>
+
+{% include skinTitle.html
+	size="mini"
+	skin=page.style
+	title="Screenshots"
+%}
+
+	{{ content }}
+	
+{% include skinTitle.html
+	size="mini"
+	skin=page.style
+	title="Downloads"
+%}
+
+<div class="download"> 
+	<a href="{{page.downloadLink}}">
+		<button title="Download from Mediafire" type="button">Download
+			<i class="fa-solid fa-square-arrow-up-right"></i>
+		</button>
+	</a>
+
+	<a href="https://osu.ppy.sh/community/forums/topics/{{page.skinID}}">
+		<button title="osu! forum post" type="button">osu! forum post
+			<i class="fa-solid fa-square-arrow-up-right"></i>
+		</button>
+	</a>
+</div>
