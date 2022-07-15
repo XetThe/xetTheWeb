@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 
-# gem "jekyll", "~> 4.2.2"
+gem "jekyll", "~> 4.2.2"
 
-gem "github-pages", group: :jekyll_plugins
+# gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
-
+  gem "github-pages"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
